@@ -155,7 +155,7 @@ module Wechat
     end
 
     def custom_message_send(message)
-      post 'message/custom/send', message.to_json, content_type: :json
+      post 'message/custom/send', JSON.generate(message), content_type: :json
     end
 
     def template_message_send(message)
